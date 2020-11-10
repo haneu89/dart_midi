@@ -1,6 +1,6 @@
 name: dart_midi
 description: A pure Dart MIDI parser and writer implementation. This package is platform agnostic and works on every dart platform.
-version: 1.0.1
+version: 1.0.2
 author: Filip Grzywok <f.grzywok@gmail.com>
 homepage: https://github.com/feelfreelinux/midi
 
