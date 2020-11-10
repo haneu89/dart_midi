@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 import 'package:dart_midi/src/byte_reader.dart';
 import 'package:dart_midi/src/midi_events.dart';
 import 'package:dart_midi/src/midi_file.dart';
@@ -63,6 +65,11 @@ class MidiParser {
   /// Parses provided [file] and returns [MidiFile]
   MidiFile parseMidiFromFile(File file) {
     return parseMidiFromBuffer(file.readAsBytesSync());
+  }
+
+  /// Parses provided [byteData] and returns [MidiFile]
+  MidiFile parseMidiFromByteData(ByteData byteData) {
+    return parseMidiFromBuffer(Uint8List.view(byteData.buffer));
   }
 
   /// Reads event from provided [p] and returns parsed [MidiEvent]
